@@ -3,6 +3,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomePage from "../Home/HomePage";
 import { HomeImg, TaskImg, InboxImg, ProfileImg } from "../theme/Images";
+import ProductList from "../ProductList/ProductList";
 const Tab = createBottomTabNavigator();
 
 const CustomTabIcon = ({ source, focused }) => {
@@ -30,7 +31,7 @@ export default function Navigation() {
         >
             <Tab.Screen
                 name="Home"
-                component={HomePage}
+                component={ProductList}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <CustomTabIcon source={HomeImg} focused={focused} />
